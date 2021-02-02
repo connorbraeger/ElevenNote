@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
@@ -14,5 +15,8 @@ namespace ElevenNote.Models
         public string Title { get; set; }
         [MaxLength(8000)]
         public string Content { get; set; }
+
+        [DefaultValue(1)]
+        public int CategoryId { get; set; } = 1;
     }
 }
